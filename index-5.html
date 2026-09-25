@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Neha Dhiman — B.Com student aspiring to build a career in banking and finance.">
+<title>Neha Dhiman | Portfolio</title>
+<style>
+:root{
+  --navy:#263f53;
+  --blue:#4f6f88;
+  --cream:#f5f1e9;
+  --paper:#fffdf9;
+  --ink:#24313b;
+  --muted:#65727b;
+  --line:#d9d0c1;
+  --accent:#b7c4df;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.6;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1080px,92%);margin:auto}
+nav{
+  position:sticky;top:0;z-index:20;
+  background:rgba(38,63,83,.96);
+  backdrop-filter:blur(10px);
+  color:white;
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:68px}
+.logo{font-weight:800;letter-spacing:1px}
+.nav-links{display:flex;gap:22px;list-style:none;font-size:.92rem}
+.nav-links a{opacity:.9}
+.nav-links a:hover{opacity:1;color:#dce6f7}
+.hero{
+  min-height:88vh;
+  display:grid;
+  place-items:center;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(183,196,223,.65), transparent 28%),
+    linear-gradient(135deg,#f8f5ee 0%,#eee8dc 100%);
+}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center;padding:70px 0}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:.78rem;color:var(--blue);font-weight:700;margin-bottom:14px}
+h1{font-size:clamp(3rem,7vw,5.6rem);line-height:.95;color:var(--navy);letter-spacing:-3px}
+.hero h2{font-size:clamp(1.2rem,2.5vw,1.7rem);margin:22px 0 15px;color:var(--blue)}
+.hero p{max-width:650px;color:#52606a;font-size:1.06rem}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 20px;border-radius:8px;font-weight:700;border:1px solid var(--navy)}
+.btn-primary{background:var(--navy);color:white}
+.btn-secondary{background:transparent;color:var(--navy)}
+.photo{
+  width:min(330px,80vw);aspect-ratio:1/1;margin:auto;
+  border:16px solid var(--navy);
+  outline:2px solid #a7b1bb;outline-offset:-28px;
+  display:grid;place-items:center;
+  background:#e6e2d8;color:#667581;text-align:center;
+  font-weight:700;letter-spacing:1px;
+}
+section{padding:85px 0}
+.section-head{margin-bottom:35px}
+.section-label{font-size:.75rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--blue);font-weight:800}
+h2.section-title{font-size:clamp(2rem,4vw,3rem);color:var(--navy);margin-top:7px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.card{
+  background:var(--paper);border:1px solid var(--line);
+  border-radius:16px;padding:30px;box-shadow:0 10px 30px rgba(38,63,83,.06)
+}
+.card h3{color:var(--navy);margin-bottom:10px}
+.edu{display:grid;grid-template-columns:1fr auto;gap:15px;align-items:start}
+.edu + .edu{border-top:1px solid var(--line);padding-top:20px;margin-top:20px}
+.edu strong{display:block;color:var(--navy)}
+.edu span{color:var(--muted);font-size:.92rem}
+.badge{background:#e5ebf6;color:var(--navy);padding:5px 9px;border-radius:20px;font-size:.8rem;font-weight:700;white-space:nowrap}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.skill{background:var(--navy);color:white;border-radius:14px;padding:24px;text-align:center}
+.skill small{display:block;opacity:.75;margin-top:5px}
+.dev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dev-card{background:var(--paper);padding:25px;border-radius:14px;border-left:5px solid var(--blue);border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.dev-card h3{color:var(--navy);margin-bottom:8px}
+.dev-card p{color:var(--muted)}
+.objective{
+  background:var(--navy);color:white;border-radius:22px;padding:45px;
+  position:relative;overflow:hidden
+}
+.objective:after{content:"";position:absolute;width:230px;height:230px;border:1px solid rgba(255,255,255,.15);border-radius:50%;right:-70px;top:-80px}
+.objective h2{font-size:2rem;margin-bottom:14px}
+.objective p{max-width:800px;color:#e3e9ee;font-size:1.08rem}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.contact-item{padding:20px 0;border-bottom:1px solid var(--line)}
+.contact-item b{color:var(--navy);display:block}
+footer{background:#1c2f3e;color:#dce5eb;text-align:center;padding:30px}
+footer p{font-size:.9rem;opacity:.8}
+@media(max-width:800px){
+  .nav-links{display:none}
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero{min-height:auto}
+  .hero-grid{padding:60px 0}
+  .photo{width:250px}
+  .skills{grid-template-columns:1fr 1fr}
+  .dev-grid{grid-template-columns:1fr}
+}
+@media(max-width:450px){.skills{grid-template-columns:1fr}.objective{padding:30px 24px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <div class="logo">NEHA DHIMAN</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#strengths">Strengths</a></li>
+      <li><a href="#development">Development</a></li>
+      <li><a href="#objective">Career</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Personal Portfolio • B.Com Student</div>
+      <h1>Neha<br>Dhiman</h1>
+      <h2>Aspiring in Banking &amp; Finance</h2>
+      <p>
+        A self-disciplined, adaptable and quick-learning B.Com student with an interest
+        in banking, finance and accounting, focused on building practical skills and
+        a strong professional foundation.
+      </p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#about">Explore My Portfolio</a>
+        <a class="btn btn-secondary" href="#contact">Contact Me</a>
+      </div>
+    </div>
+    <div class="photo">YOUR<br>PHOTO</div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">01 • About Me</div>
+      <h2 class="section-title">A learner building her professional foundation.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="card">
+        <h3>Who I Am</h3>
+        <p>
+          I am a B.Com student with an interest in banking, finance and accounting.
+          I consider myself self-disciplined, adaptable and a quick learner. I enjoy
+          developing new skills and improving my communication, presentation and
+          technical abilities while preparing for a future professional career.
+        </p>
+      </div>
+      <div class="card">
+        <h3>What I Value</h3>
+        <p>
+          Continuous learning, responsibility, effective communication, teamwork and
+          personal growth are important to me. I believe professional development is
+          a journey where small improvements create lasting progress.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">02 • Education</div>
+      <h2 class="section-title">Academic background</h2>
+    </div>
+    <div class="card">
+      <div class="edu">
+        <div>
+          <strong>Bachelor of Commerce (B.Com)</strong>
+          <span>Government Degree College, Dharamshala</span>
+        </div>
+        <span class="badge">Current</span>
+      </div>
+      <div class="edu">
+        <div>
+          <strong>Senior Secondary (Class XII)</strong>
+          <span>CBSE • 2026</span>
+        </div>
+        <span class="badge">93.2%</span>
+      </div>
+      <div class="edu">
+        <div>
+          <strong>Secondary (Class X)</strong>
+          <span>CBSE • 2024</span>
+        </div>
+        <span class="badge">86%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="strengths">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">03 • Strengths &amp; Skills</div>
+      <h2 class="section-title">What I bring to a team</h2>
+    </div>
+    <div class="skills">
+      <div class="skill">Communication<small>Clear expression</small></div>
+      <div class="skill">Problem Solving<small>Logical approach</small></div>
+      <div class="skill">Leadership<small>Taking initiative</small></div>
+      <div class="skill">Creativity<small>Fresh ideas</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="development">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">04 • Areas for Development</div>
+      <h2 class="section-title">Skills I am actively improving</h2>
+    </div>
+    <div class="dev-grid">
+      <div class="dev-card">
+        <h3>Public Speaking</h3>
+        <p>Becoming more confident and composed while speaking before an audience.</p>
+      </div>
+      <div class="dev-card">
+        <h3>Technical Skills</h3>
+        <p>Developing stronger computer, Excel and digital workplace skills.</p>
+      </div>
+      <div class="dev-card">
+        <h3>Presentation Skills</h3>
+        <p>Improving the ability to organize and communicate ideas clearly and effectively.</p>
+      </div>
+      <div class="dev-card">
+        <h3>Professional Communication</h3>
+        <p>Building confidence in formal, academic and professional interactions.</p>
+      </div>
+      <div class="dev-card">
+        <h3>Continuous Learning</h3>
+        <p>Expanding practical knowledge related to banking, finance and accounting.</p>
+      </div>
+      <div class="dev-card">
+        <h3>Personal Growth</h3>
+        <p>Turning improvement areas into measurable strengths through consistent practice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="objective">
+  <div class="container">
+    <div class="objective">
+      <div class="section-label" style="color:#b7c4df">05 • Career Objective</div>
+      <h2>Building a career in banking and finance.</h2>
+      <p>
+        To build a successful career in the banking and finance sector by applying
+        my knowledge, developing practical skills and contributing effectively to
+        a professional organization.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">06 • Contact</div>
+      <h2 class="section-title">Let's connect</h2>
+    </div>
+    <div class="card contact-grid">
+      <div>
+        <div class="contact-item">
+          <b>Email</b>
+          <a href="mailto:nehadhiman031@gmail.com">nehadhiman031@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <b>Phone</b>
+          <span>+91 78329 58447</span>
+        </div>
+      </div>
+      <div>
+        <div class="contact-item">
+          <b>Location</b>
+          <span>Dharamshala, Himachal Pradesh</span>
+        </div>
+        <div class="contact-item">
+          <b>Focus</b>
+          <span>Banking • Finance • Accounting</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Neha Dhiman • Personal Portfolio</p>
+</footer>
+
+</body>
+</html>
